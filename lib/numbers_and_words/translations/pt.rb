@@ -2,6 +2,7 @@ module NumbersAndWords
   module Translations
     class Pt < Base
       include NumbersAndWords::Translations::Families::Latin
+      include NumbersAndWords::Translations::Extensions::FractionSignificance
 
       def tens numbers, options = {}
         options[:alone] = true if options[:alone].nil?
@@ -14,7 +15,7 @@ module NumbersAndWords
 
       def hundreds number, options = {}
         return t(:one_hundred) if options[:is_one_hundred]
-        options[:is_hundred] ? t(:hundreds)[number - 1] : t(:hundreds)[number - 1] + ' e'
+        options[:is_hundred] ? t(:hundreds)[number - 1] : t(:hundreds)[number - 1] + ' e '
       end
 
       def megs capacity, options = {}

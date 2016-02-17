@@ -11,3 +11,4 @@ pt:
     one_hundred: cem
     mega: [_, mil, milhão, bilhão, trilhão, quadrilhão, quinquilhão]
     megas: [_, mil, milhões, bilhões, trilhões, quadrilhões, quinquilhões]
+    union_separator: e
